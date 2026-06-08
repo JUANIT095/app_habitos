@@ -1,4 +1,6 @@
 import 'package:app_habitos/pages/HomePage.dart';
+import 'package:app_habitos/pages/login_page.dart';
+import 'package:app_habitos/pages/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -57,25 +59,19 @@ class _OnboardingPageState extends State<OnboardingPage>
     super.dispose();
   }
 
-  /// Navega a la página de registro (placeholder por ahora)
+  /// Navega a la página de registro
   void _navigateToRegister() {
-    // TODO: Navegar a página de registro cuando la crees
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Funcionalidad de registro próximamente'),
-        backgroundColor: Color(0xFF6C63FF),
-      ),
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => const RegisterPage()),
     );
   }
 
-  /// Navega a la página de inicio de sesión (placeholder por ahora)
+  /// Navega a la página de inicio de sesión
   void _navigateToLogin() {
-    // TODO: Navegar a página de login cuando la crees
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Funcionalidad de login próximamente'),
-        backgroundColor: Color(0xFF6C63FF),
-      ),
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => const LoginPage()),
     );
   }
 
